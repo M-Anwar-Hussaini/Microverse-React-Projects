@@ -1,7 +1,4 @@
 function App() {
-  return (
-    <h1>Microverse Projects</h1>
-  );
+  return <h2>Redux Toolkit</h2>;
 }
-
 export default App;
