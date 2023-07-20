@@ -11,7 +11,7 @@ export default function CartContainer() {
         <h2>Your bag</h2>
         {amount === 0 && <h4 className="empty-cart">is currently empty</h4>}
       </header>
-      {amount === 0 && (
+      {amount === 0 || (
         <div>
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
