@@ -21,17 +21,22 @@ export default function CartContainer() {
           ))}
         </div>
       )}
-      <footer>
-        <hr />
-        <div className="cart-total">
-          <h4>
-            Total: <span>{total}</span>
-          </h4>
-        </div>
-        <button className="btn clear-btn" onClick={() => dispatch(clearCart())}>
-          Clear cart
-        </button>
-      </footer>
+      {amount === 0 || (
+        <footer>
+          <hr />
+          <div className="cart-total">
+            <h4>
+              Total: <span>{total.toFixed(2)}</span>
+            </h4>
+          </div>
+          <button
+            className="btn clear-btn"
+            onClick={() => dispatch(clearCart())}
+          >
+            Clear cart
+          </button>
+        </footer>
+      )}
     </section>
   );
 }

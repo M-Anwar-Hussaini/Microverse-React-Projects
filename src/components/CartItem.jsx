@@ -17,7 +17,12 @@ export default function CartItem({ id, title, price, img, amount }) {
       </div>
 
       <div>
-        <button className="amount-btn" onClick={() => dispatch(increase(id))}>
+        <button
+          className="amount-btn"
+          onClick={() => {
+            dispatch(increase(id));
+          }}
+        >
           <ChevronUp />
         </button>
         <p className="amount">{amount}</p>
